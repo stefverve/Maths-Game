@@ -7,11 +7,28 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AdditionQuestion.h"
+#import "InputHandler.h"
+#import "ScoreKeeper.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        NSString *input = @"0";
+        ScoreKeeper *score = [[ScoreKeeper alloc] init];
+        while ([input isNotEqualTo:@"quit"]) {
+            AdditionQuestion *q = [[AdditionQuestion alloc] init];
+            NSLog(@"What is %@?", q.question);
+            input = [[[InputHandler alloc]init] getString];
+            if (input.intValue == q.answer) {
+                NSLog(@"Right!");
+                score.right++;
+            } else if ([input isEqualToString:@"quit"]) {
+                NSLog(@"%@", [score result]);
+            } else {
+                NSLog(@"Wrong!");
+                score.wrong++;
+            }
+        }
     }
     return 0;
 }
