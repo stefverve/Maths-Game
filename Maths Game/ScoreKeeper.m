@@ -10,6 +10,16 @@
 
 @implementation ScoreKeeper
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _right = 0;
+        _wrong = 0;
+    }
+    return self;
+}
+
 - (NSString *)result {
     return [NSString stringWithFormat:@"Right: %ld, Wrong: %ld, Score: %d%%", (long)self.right, (long)self.wrong, (int)(self.right*100 / (float)(self.right + self.wrong))];
 }

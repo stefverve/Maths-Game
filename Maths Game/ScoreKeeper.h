@@ -13,6 +13,7 @@
 @property NSInteger right;
 @property NSInteger wrong;
 
+- (instancetype)init;
 - (NSString *)result;
 
 @end
