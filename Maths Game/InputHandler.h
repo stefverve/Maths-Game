@@ -10,8 +10,6 @@
 
 @interface InputHandler : NSObject
 
-//@property NSString *input;
-
 - (NSString *)getString;
 
 @end
