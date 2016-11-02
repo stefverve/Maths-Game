@@ -1,14 +1,14 @@
 //
-//  AdditionQuestion.m
+//  SubtractionQuestion.m
 //  Maths Game
 //
 //  Created by Stefan Verveniotis on 2016-11-02.
 //  Copyright © 2016 Stefan Verveniotis. All rights reserved.
 //
 
-#import "AdditionQuestion.h"
+#import "SubtractionQuestion.h"
 
-@implementation AdditionQuestion
+@implementation SubtractionQuestion
 
 - (instancetype)init
 {
@@ -20,8 +20,8 @@
 }
 
 - (void) generateQuestion {
-    super.question = [NSString stringWithFormat:@"%ld + %ld", (long)super.leftValue, (long)super.rightValue];
-    super.answer = super.leftValue + super.rightValue;
+    super.question = [NSString stringWithFormat:@"%ld - %ld", (long)super.leftValue, (long)super.rightValue];
+    super.answer = super.leftValue - super.rightValue;
 }
 
 @end

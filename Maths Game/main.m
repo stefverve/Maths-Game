@@ -7,26 +7,29 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AdditionQuestion.h"
+#import "Question.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
 #import "QuestionManager.h"
+#import "QuestionFactory.h"
+//#import "AdditionQuestion.h" //unnecessary but for test
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSString *input = @"0";
         ScoreKeeper *score = [[ScoreKeeper alloc] init];
         QuestionManager *qM = [[QuestionManager alloc] init];
+        QuestionFactory *qF = [[QuestionFactory alloc] init];
         while ([input isNotEqualTo:@"quit"]) {
-            AdditionQuestion *q = [[AdditionQuestion alloc] init];
+            Question *q = [qF generateRandomQuestion];   // SHOULD BE QUESTION, changed to audition for test.
             [qM.questions addObject:q];
-            NSLog(@"What is %@?", q.question);
+            NSLog(@"\nWhat is %@?", q.question);
             input = [[[InputHandler alloc]init] getString];
             if (input.intValue == q.answer) {
                 NSLog(@"\nRight! %@", [qM timeOutput]);
                 score.right++;
             } else if ([input isEqualToString:@"quit"]) {
-                NSLog(@"%@ %@", [score result], [qM timeOutput]);
+                NSLog(@"%@", [score result]);
             } else {
                 NSLog(@"\nWrong! %@", [qM timeOutput]);
                 score.wrong++;
