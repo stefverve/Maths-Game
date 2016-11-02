@@ -12,7 +12,6 @@
 #import "ScoreKeeper.h"
 #import "QuestionManager.h"
 #import "QuestionFactory.h"
-//#import "AdditionQuestion.h" //unnecessary but for test
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -21,7 +20,7 @@ int main(int argc, const char * argv[]) {
         QuestionManager *qM = [[QuestionManager alloc] init];
         QuestionFactory *qF = [[QuestionFactory alloc] init];
         while ([input isNotEqualTo:@"quit"]) {
-            Question *q = [qF generateRandomQuestion];   // SHOULD BE QUESTION, changed to audition for test.
+            Question *q = [qF generateRandomQuestion];
             [qM.questions addObject:q];
             NSLog(@"\nWhat is %@?", q.question);
             input = [[[InputHandler alloc]init] getString];
