@@ -11,6 +11,7 @@
 		E221EBB21DC906C2009A2AD4 /* AdditionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = E221EBB11DC906C2009A2AD4 /* AdditionQuestion.m */; };
 		E221EBB51DC913CC009A2AD4 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E221EBB41DC913CC009A2AD4 /* InputHandler.m */; };
 		E221EBB81DC91AE4009A2AD4 /* ScoreKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = E221EBB71DC91AE4009A2AD4 /* ScoreKeeper.m */; };
+		E221EBF01DCA3891009A2AD4 /* QuestionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E221EBEF1DCA3891009A2AD4 /* QuestionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		E221EBB41DC913CC009A2AD4 /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
 		E221EBB61DC91AE4009A2AD4 /* ScoreKeeper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreKeeper.h; sourceTree = "<group>"; };
 		E221EBB71DC91AE4009A2AD4 /* ScoreKeeper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreKeeper.m; sourceTree = "<group>"; };
+		E221EBEE1DCA3891009A2AD4 /* QuestionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionManager.h; sourceTree = "<group>"; };
+		E221EBEF1DCA3891009A2AD4 /* QuestionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				E221EBB41DC913CC009A2AD4 /* InputHandler.m */,
 				E221EBB61DC91AE4009A2AD4 /* ScoreKeeper.h */,
 				E221EBB71DC91AE4009A2AD4 /* ScoreKeeper.m */,
+				E221EBEE1DCA3891009A2AD4 /* QuestionManager.h */,
+				E221EBEF1DCA3891009A2AD4 /* QuestionManager.m */,
 			);
 			path = "Maths Game";
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E221EBF01DCA3891009A2AD4 /* QuestionManager.m in Sources */,
 				E221EBB81DC91AE4009A2AD4 /* ScoreKeeper.m in Sources */,
 				E221EBAA1DC8F3CA009A2AD4 /* main.m in Sources */,
 				E221EBB51DC913CC009A2AD4 /* InputHandler.m in Sources */,
@@ -264,6 +270,7 @@
 				E221EBAF1DC8F3CA009A2AD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

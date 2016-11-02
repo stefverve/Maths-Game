@@ -10,10 +10,9 @@
 
 @interface ScoreKeeper : NSObject
 
-@property NSInteger right;
-@property NSInteger wrong;
+@property (nonatomic)  NSInteger right;
+@property (nonatomic) NSInteger wrong;
 
-- (instancetype)init;
 - (NSString *)result;
 
 @end

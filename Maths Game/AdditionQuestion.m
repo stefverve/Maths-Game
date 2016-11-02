@@ -16,8 +16,18 @@
         int num2 = arc4random_uniform(91) + 10;
         _question = [NSString stringWithFormat:@"%d + %d", num1, num2];
         _answer = num1 + num2;
+        _startTime = [NSDate date];
     }
     return self;
+}
+
+- (NSInteger) answer {
+    _endTime = [NSDate date];
+    return _answer;
+}
+
+- (NSTimeInterval) answerTime {
+    return [self.endTime timeIntervalSinceDate:self.startTime];
 }
 
 @end
